@@ -26,7 +26,7 @@ class CallableAction extends AbstractAction
     }
 
     /**
-     *
+     * {@inheritdoc}
      */
     public function execute(): void
     {
