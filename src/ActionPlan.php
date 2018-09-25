@@ -31,6 +31,9 @@ class ActionPlan implements \IteratorAggregate, \Countable
         return count($this->actions);
     }
 
+    /**
+     * Sequentially runs all the actions of the Action Plan
+     */
     public function run(): void
     {
         /** @var AbstractAction $action */
