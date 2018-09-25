@@ -45,4 +45,20 @@ class ActionPlanTest extends TestCase
         $this->expectOutputString('Simple Action...');
         $actionPlan->run();
     }
+
+    public function testSetActions()
+    {
+        $actionPlan = new ActionPlan();
+
+        $actionPlan->setActions([
+            new SimpleAction('SimpleAction#1'),
+        ]);
+        $this->assertEquals(1, count($actionPlan->getActions()));
+
+        $actionPlan->setActions([
+            new SimpleAction('SimpleAction#1'),
+            new SimpleAction('SimpleAction#2'),
+        ]);
+        $this->assertEquals(2, count($actionPlan->getActions()));
+    }
 }
