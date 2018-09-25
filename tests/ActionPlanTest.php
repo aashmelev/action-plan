@@ -26,13 +26,13 @@ class ActionPlanTest extends TestCase
         $this->assertEquals(2, $actionPlan->countActions());
     }
 
-    public function testIterateActions()
+    public function testIterator()
     {
         $actionPlan = new ActionPlan([
             new SimpleAction('SimpleAction#1'),
         ]);
 
-        $action = $actionPlan->iterateActions()->current();
+        $action = $actionPlan->getIterator()->current();
         $this->assertInstanceOf(AbstractAction::class, $action);
     }
 
