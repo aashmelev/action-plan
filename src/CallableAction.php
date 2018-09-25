@@ -14,7 +14,6 @@ class CallableAction extends AbstractAction
     private $action;
 
     /**
-     * CallableAction constructor.
      * @param $id
      * @param $description
      * @param callable $action

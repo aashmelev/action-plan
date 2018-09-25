@@ -29,53 +29,35 @@ abstract class AbstractAction
     }
 
     /**
-     * Метод, содержащий логику действия
+     * Executing the action
      */
     abstract public function execute(): void;
 
-    /**
-     * @param string $id
-     */
     public function setId(string $id): void
     {
         $this->id = $id;
     }
 
-    /**
-     * @return string
-     */
     public function getId(): string
     {
         return $this->id;
     }
 
-    /**
-     * @param string $description
-     */
     public function setDescription(string $description): void
     {
         $this->description = $description;
     }
 
-    /**
-     * @return string
-     */
     public function getDescription(): string
     {
         return $this->description;
     }
 
-    /**
-     * @return string
-     */
     public function getInfo(): string
     {
         return sprintf('Action#%s - %s', $this->id, $this->description);
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->getInfo();

@@ -29,9 +29,6 @@ class ActionPlan implements \IteratorAggregate, \Countable
         return new \ArrayIterator($this->actions);
     }
 
-    /**
-     * @return int
-     */
     public function count(): int
     {
         return count($this->actions);
