@@ -44,4 +44,20 @@ class ActionPlan implements \IteratorAggregate
             $action->execute();
         }
     }
+
+    /**
+     * @return AbstractAction[]
+     */
+    public function getActions(): array
+    {
+        return $this->actions;
+    }
+
+    /**
+     * @param AbstractAction[] $actions
+     */
+    public function setActions(array $actions): void
+    {
+        $this->actions = $actions;
+    }
 }
