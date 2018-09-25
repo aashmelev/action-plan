@@ -21,10 +21,7 @@ class ActionPlan implements \IteratorAggregate, \Countable
         $this->actions = $actions;
     }
 
-    /**
-     * @return \ArrayIterator|\Traversable
-     */
-    public function getIterator()
+    public function getIterator(): \ArrayIterator
     {
         return new \ArrayIterator($this->actions);
     }
