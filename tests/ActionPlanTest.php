@@ -9,21 +9,21 @@ use PHPUnit\Framework\TestCase;
 
 class ActionPlanTest extends TestCase
 {
-    public function testCountActions()
+    public function testCount()
     {
         $actionPlan = new ActionPlan([]);
-        $this->assertEquals(0, $actionPlan->countActions());
+        $this->assertEquals(0, $actionPlan->count());
 
         $actionPlan = new ActionPlan([
             new SimpleAction('SimpleAction#1'),
         ]);
-        $this->assertEquals(1, $actionPlan->countActions());
+        $this->assertEquals(1, $actionPlan->count());
 
         $actionPlan = new ActionPlan([
             new SimpleAction('SimpleAction#1'),
             new SimpleAction('SimpleAction#2'),
         ]);
-        $this->assertEquals(2, $actionPlan->countActions());
+        $this->assertEquals(2, $actionPlan->count());
     }
 
     public function testIterator()

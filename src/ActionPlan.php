@@ -6,7 +6,7 @@ namespace Aashmelev\ActionPlan;
  * Class ActionPlan
  * @package Aashmelev\ActionPlan
  */
-class ActionPlan implements \IteratorAggregate
+class ActionPlan implements \IteratorAggregate, \Countable
 {
     /**
      * @var AbstractAction[]
@@ -32,7 +32,7 @@ class ActionPlan implements \IteratorAggregate
     /**
      * @return int
      */
-    public function countActions(): int
+    public function count(): int
     {
         return count($this->actions);
     }
